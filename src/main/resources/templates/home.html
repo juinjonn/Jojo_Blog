@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script type="text/javascript" src="./js/editormd.min.js"></script>
+    <link rel="stylesheet" href="./css/editormd.css">
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Jojo Blog</title>
+</head>
+
+<body>
+    <div id="layout">
+        <header>
+            <h1>动态创建 Editor.md</h1>
+            <p>Dynamic create Editor.md</p>
+            <br>
+            <div class="btns" style="margin:0;">
+                <button id="create-btn">动态创建一个 Editor.md</button>
+                <button id="remove-btn">移除 Editor.md</button>
+            </div>
+        </header>
+    </div>
+    <script type="text/javascript">
+        var testEditormd;
+
+        $(function () {
+            $("#create-btn").click(function () {
+
+                $("#layout").append("<div id=\"test-editormd\"></div>");
+
+                testEditormd = editormd("test-editormd", {
+                    width: "90%",
+                    height: 640,
+                    emoji: true,
+                    markdown: "### 动态创建 Editor.md\r\n\r\nDynamic create Editor.md",
+                    path: 'plug-ins/EditorMD/lib/'
+
+                });
+
+            });
+
+            $("#remove-btn").click(function () {
+                testEditormd.editor.remove();
+            });
+        });
+    </script>
+</body>
+<script>
+
+</script>
+
+</html>
