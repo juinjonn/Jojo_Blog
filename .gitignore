@@ -1,1 +1,46 @@
-# Created by .ignore support plugin (hsz.mobi)
+# kdiff3 ignore
+*.orig
+
+# maven ignore
+target/
+
+# eclipse ignore
+.settings/
+.project
+.classpath
+
+# idea ignore
+.idea/
+*.ipr
+*.iml
+*.iws
+
+# temp ignore
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
+
+# system ignore
+.DS_Store
+Thumbs.db
+
+# package ignore (optional)
+# *.jar
+# *.war
+# *.zip
+# *.tar
+# *.tar.gz
+log/test.log.2018-09-28.log
+src/main/java/com/juinjonn/web/jojo_blog/common/
+src/main/java/com/juinjonn/web/jojo_blog/controller/blog/
+src/main/java/com/juinjonn/web/jojo_blog/dao/
+src/main/java/com/juinjonn/web/jojo_blog/dto/
+src/main/java/com/juinjonn/web/jojo_blog/service/
+src/main/resources/static/img/
+target/classes/static/editor.md-master/.gitignore
+target/classes/static/img/
+target/generated-sources/
+target/generated-test-sources/
+target/surefire-reports/2018-09-09T16-31-36_132.dumpstream
